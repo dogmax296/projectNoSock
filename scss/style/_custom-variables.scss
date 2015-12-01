@@ -1,0 +1,24 @@
+// FONT FAMILY
+
+$font-family-main:	'MicrosoftPhagsPa-Bold';
+$font-family-sub:		'MicrosoftPhagsPa';
+
+//== Colors
+//
+//## Gray and brand colors for use across Bootstrap.
+
+$gray-lighter:           lighten($gray-base, 100%) !default; // #fff
+
+$brand-primary:         #000 !default;
+$brand-success:         #d8eaee !default; //blue
+$brand-info:            #f1f1bc !default; //yellow
+$brand-warning:         #e7cacc !default; //pink
+
+//** Global text color on `<body>`.
+$text-color:            $gray-base !default;
+
+//** Global textual link color.
+$link-color:            $gray-base !default;
+
+//** Link hover decoration.
+$link-hover-decoration: none !default;
