@@ -1,15 +1,46 @@
-// BOOTSTRAP
-@import "bootstrap";
+
 
 // FONTS
 
-@import "fonts";
+@import "_fonts.scss";
 
 // Variables
-@import "style/custom-variables";
+@import "style/_custom-variables.scss";
 
 // MIXINS
-@import "style/custom-mixins";
+@import "style/_custom-mixins.scss";
+
+// BOOTSTRAP
+@import "_bootstrap.scss";
 
 
+
+.navbar{
+
+	&--custom{
+
+		border: none;	
+	}
+
+	&-collapse{
+
+		&--custom{
+			border:none;
+		}
+	}
+
+	&-toggle{
+
+		&--custom{
+			border:none;
+			
+			&:hover,
+			&:focus{
+				.icon-bar{
+					background-color: $brand-secondary;
+				}
+			}
+		}
+	}
+}
 

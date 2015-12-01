@@ -6,10 +6,11 @@ $font-family-sub:		'MicrosoftPhagsPa';
 //== Colors
 //
 //## Gray and brand colors for use across Bootstrap.
-
+$gray-base:              #000 !default;
 $gray-lighter:           lighten($gray-base, 100%) !default; // #fff
 
 $brand-primary:         #000 !default;
+$brand-secondary:       #FFF !default;
 $brand-success:         #d8eaee !default; //blue
 $brand-info:            #f1f1bc !default; //yellow
 $brand-warning:         #e7cacc !default; //pink
@@ -22,3 +23,24 @@ $link-color:            $gray-base !default;
 
 //** Link hover decoration.
 $link-hover-decoration: none !default;
+
+
+//== Navbar
+//
+//##
+
+// Basics of a navbar
+
+$navbar-default-color:             $gray-base !default;
+$navbar-default-bg:                $brand-secondary !default;
+
+// Navbar links
+$navbar-default-link-color:                $gray-base !default;
+$navbar-default-link-hover-color:          $gray-lighter !default;
+$navbar-default-link-hover-bg:             $brand-primary !default;
+$navbar-default-link-active-color:         $gray-lighter !default;
+$navbar-default-link-active-bg:            $brand-primary !default;
+
+// Navbar toggle
+$navbar-default-toggle-hover-bg:           $brand-primary !default;
+$navbar-default-toggle-icon-bar-bg:        $brand-primary !default;
