@@ -18,14 +18,17 @@
 .navbar{
 
 	&--custom{
-
+		@include padding-vertical(16px, 16px);
+		margin:0;
 		border: none;	
 	}
 
 	&-collapse{
 
 		&--custom{
+
 			border:none;
+			text-align: center;
 		}
 	}
 
@@ -33,6 +36,10 @@
 
 		&--custom{
 			border:none;
+			float:left;
+			border-radius: 0;
+			@include padding-custom(7px, 7px, 7px, 7px);
+			margin: 0;
 			
 			&:hover,
 			&:focus{
@@ -42,5 +49,140 @@
 			}
 		}
 	}
+
+	&-nav{
+		
+		&--custom{
+			float:none;
+			@include padding-vertical(55px, 55px);
+		}
+
+		.navbar-nav{
+			
+			&__link{
+				@include padding-vertical(23px, 23px);
+			}
+
+		}
+
+		&__link{
+
+			display: block;
+			@include font($font-family-main,18px,$brand-primary,none);
+			
+		}
+	}
+
+	&-header{
+		
+		&--custom{
+			display: inline-block;
+		}
+	}
+
+	&-brand{
+		
+		&--custom{
+			width: 162px;
+			padding: 0;
+		}
+	}
+
+	
 }
 
+.icon-nav{
+	list-style-type: none;
+	float:right;
+	margin:0;
+	padding: 0;
+
+	&__item{
+		float: left;
+	}
+
+	&__link{
+		display: block;
+		@include padding-custom(7px, 7px, 7px, 7px);
+		
+		&:hover,
+		&:focus{
+			background-color: $brand-primary;
+			color: $brand-secondary;
+		}
+	}
+}
+
+// RESPONSIVE
+@media (min-width: $screen-sm){
+	.navbar{
+
+		&--custom{
+			@include padding-vertical(30px, 30px);
+				
+		}
+
+		&-nav{
+			
+			&--custom{
+
+				display: inline-block;
+				@include padding-vertical(0, 0);
+			}
+
+			.navbar-nav{
+			
+				&__link{
+					@include padding-custom(13px, 13px, 13px, 13px);
+				}
+			}			
+		}
+	}
+
+	.icon-nav{
+		&__link{
+			@include padding-custom(10px, 10px, 10px, 10px);
+		}
+	}
+}
+
+@media (min-width: $screen-lg){
+
+	.navbar{
+
+		&--custom{
+			@include padding-vertical(40px, 40px);
+				
+		}
+
+		&-nav{
+
+			&__link{
+				@include font($font-family-main,24px,$brand-primary,none);
+			}
+
+			.navbar-nav{
+			
+				&__link{
+					@include padding-custom(38px, 38px, 38px, 38px);
+				}
+			}
+
+			&--custom{
+				
+				@include padding-vertical(0, 0);
+			}		
+		}
+
+		&-brand{
+		
+			&--custom{
+				@include margin-vertical(20px, 0);
+			}
+		}
+	}
+
+	.icon-nav{
+		@include margin-vertical(30px, 0)
+	}
+}
