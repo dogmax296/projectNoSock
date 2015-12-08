@@ -13,14 +13,22 @@
 // BOOTSTRAP
 @import "_bootstrap.scss";
 
+.heading{
+	
+	&--main{
 
+		@include font($font-family-main,18px,$gray-base,uppercase)
+	}
+}
 
 .navbar{
 
 	&--custom{
-		@include padding-vertical(16px, 16px);
+
+		@include padding-vertical(14px, 14px);
 		margin:0;
-		border: none;	
+		border: none;
+		position: relative;
 	}
 
 	&-collapse{
@@ -29,6 +37,12 @@
 
 			border:none;
 			text-align: center;
+			position: absolute;
+		    top: 71px;
+		    width: 97%;
+		    left: 20px;
+		    background: $brand-secondary;
+		    @include padding-horizontal(0,0);
 		}
 	}
 
@@ -39,7 +53,7 @@
 			float:left;
 			border-radius: 0;
 			@include padding-custom(7px, 7px, 7px, 7px);
-			margin: 0;
+			@include margin-vertical(4px, 0);
 			
 			&:hover,
 			&:focus{
@@ -53,8 +67,10 @@
 	&-nav{
 		
 		&--custom{
+
+			@include margin-custom(0, 0, 0, 0);
 			float:none;
-			@include padding-vertical(55px, 55px);
+			@include padding-vertical(36px, 37px);
 		}
 
 		.navbar-nav{
@@ -86,9 +102,7 @@
 			width: 162px;
 			padding: 0;
 		}
-	}
-
-	
+	}	
 }
 
 .icon-nav{
@@ -113,19 +127,43 @@
 	}
 }
 
+.header{
+
+	&__bg{
+
+		@include background-cover;
+		height: 415px;
+	}
+}
+
+.main{
+
+	@include padding-vertical(40px, 40px);
+
+	&__heading{
+
+		&-holder{
+			text-align: center;
+		}
+	}
+}
+
 // RESPONSIVE
 @media (min-width: $screen-sm){
 	.navbar{
 
 		&--custom{
+
 			@include padding-vertical(30px, 30px);
+			position: static;
 				
 		}
 
 		&-nav{
 			
 			&--custom{
-
+				
+				@include margin-custom(7.5px, 15px, 7.5px, 15px);
 				display: inline-block;
 				@include padding-vertical(0, 0);
 			}
@@ -137,16 +175,49 @@
 				}
 			}			
 		}
+
+		&-collapse{
+
+			&--custom{
+
+				
+				position: static;
+			    
+			    width: 100%;
+			    
+			    
+			    @include padding-horizontal(15px,15px);
+			}
+		}
 	}
 
 	.icon-nav{
+		
+		@include margin-vertical(10px, 0);
+
 		&__link{
 			@include padding-custom(10px, 10px, 10px, 10px);
+		}
+	}
+
+	.header{
+
+		&__bg{
+
+			height: 782px;
 		}
 	}
 }
 
 @media (min-width: $screen-lg){
+
+	.heading{
+		
+		&--main{
+
+			font-size: 48px;
+		}
+	}
 
 	.navbar{
 
@@ -183,6 +254,11 @@
 	}
 
 	.icon-nav{
-		@include margin-vertical(30px, 0)
+
+		@include margin-vertical(38px, 0)
+	}
+
+	.main{
+		@include padding-vertical(170px, 150px);
 	}
 }

@@ -6689,16 +6689,31 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   }
 }
 
+.heading--main {
+  font-family: "MicrosoftPhagsPa-Bold";
+  font-size: 18px;
+  color: #000;
+  text-transform: uppercase;
+}
+
 .navbar--custom {
-  padding-top: 16px;
-  padding-bottom: 16px;
+  padding-top: 14px;
+  padding-bottom: 14px;
   margin: 0;
   border: none;
+  position: relative;
 }
 
 .navbar-collapse--custom {
   border: none;
   text-align: center;
+  position: absolute;
+  top: 71px;
+  width: 97%;
+  left: 20px;
+  background: #FFF;
+  padding-right: 0;
+  padding-left: 0;
 }
 
 .navbar-toggle--custom {
@@ -6709,7 +6724,8 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   padding-right: 7px;
   padding-bottom: 7px;
   padding-left: 7px;
-  margin: 0;
+  margin-top: 4px;
+  margin-bottom: 0;
 }
 
 .navbar-toggle--custom:hover .icon-bar,
@@ -6718,9 +6734,13 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 }
 
 .navbar-nav--custom {
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
   float: none;
-  padding-top: 55px;
-  padding-bottom: 55px;
+  padding-top: 36px;
+  padding-bottom: 37px;
 }
 
 .navbar-nav .navbar-nav__link {
@@ -6770,12 +6790,32 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   color: #FFF;
 }
 
+.header__bg {
+  background: no-repeat center center;
+  background-size: cover;
+  height: 415px;
+}
+
+.main {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.main__heading-holder {
+  text-align: center;
+}
+
 @media (min-width: 768px) {
   .navbar--custom {
     padding-top: 30px;
     padding-bottom: 30px;
+    position: static;
   }
   .navbar-nav--custom {
+    margin-top: 7.5px;
+    margin-right: 15px;
+    margin-bottom: 7.5px;
+    margin-left: 15px;
     display: inline-block;
     padding-top: 0;
     padding-bottom: 0;
@@ -6786,15 +6826,31 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
     padding-bottom: 13px;
     padding-left: 13px;
   }
+  .navbar-collapse--custom {
+    position: static;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  .icon-nav {
+    margin-top: 10px;
+    margin-bottom: 0;
+  }
   .icon-nav__link {
     padding-top: 10px;
     padding-right: 10px;
     padding-bottom: 10px;
     padding-left: 10px;
   }
+  .header__bg {
+    height: 782px;
+  }
 }
 
 @media (min-width: 1200px) {
+  .heading--main {
+    font-size: 48px;
+  }
   .navbar--custom {
     padding-top: 40px;
     padding-bottom: 40px;
@@ -6820,8 +6876,12 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
     margin-bottom: 0;
   }
   .icon-nav {
-    margin-top: 30px;
+    margin-top: 38px;
     margin-bottom: 0;
+  }
+  .main {
+    padding-top: 170px;
+    padding-bottom: 150px;
   }
 }
 
