@@ -17,7 +17,7 @@
 	
 	&--main{
 
-		@include font($font-family-main,18px,$gray-base,uppercase)
+		@include font($font-family-main,18px,$gray-base,uppercase);
 	}
 }
 
@@ -99,31 +99,55 @@
 	&-brand{
 		
 		&--custom{
+
 			width: 162px;
 			padding: 0;
+			
 		}
 	}	
 }
 
 .icon-nav{
+
 	list-style-type: none;
 	float:right;
 	margin:0;
 	padding: 0;
 
 	&__item{
+
 		float: left;
 	}
 
 	&__link{
+
 		display: block;
 		@include padding-custom(7px, 7px, 7px, 7px);
 		
 		&:hover,
 		&:focus{
+
 			background-color: $brand-primary;
-			color: $brand-secondary;
+			color: $gray-lighter;
 		}
+
+		&--footer{
+
+			@include padding-custom(10px, 14px, 5px, 14px);
+			background-color: transparent;
+			color: $gray-lighter;
+			
+			&:hover,
+			&:focus{
+				background-color: $brand-secondary;
+				color: $gray-base;
+			}
+		}
+	}
+
+	&--footer{
+
+		float:none;
 	}
 }
 
@@ -142,21 +166,222 @@
 
 	&__heading{
 
+		@include margin-vertical(0, 30px);
+
 		&-holder{
+
 			text-align: center;
+		}
+	}
+
+	&__img{
+
+		@include background-cover;
+		position: relative;
+		
+		&--fall-winter{
+			
+			width: 175px;
+			height: 255px;
+			@include margin-custom(0, 0, 35px, 20px);
+		}
+
+		&--spring-summer{
+
+			width: 270px;
+			height: 265px;
+			@include margin-custom(0, auto, 50px, auto);
+		}
+
+		&--winter{
+
+			width: 210px;
+			height: 280px;
+		}
+		
+		&-caption{
+			
+			@include font($font-family-main,14px,$gray-base,uppercase);
+			position: absolute;
+			
+			&--fall-winter{
+
+				bottom: 73px;
+    			right: -75px;
+			}
+
+			&--spring-summer{
+
+				bottom: 19px;
+    			right: 15px;
+			}
+
+			&--winter{
+
+				bottom: 27px;
+    			left: -75px;
+			}
+
+		}
+	}
+
+	&__icon{
+
+		display: inline-block;
+		
+		&-square{
+			
+			transform: rotate(30deg);
+		}
+
+		&-triangle{
+
+			transform: rotate(-15deg);
 		}
 	}
 }
 
+.footer{
+	
+	background-color: $brand-primary;
+	color: $brand-secondary;
+	
+
+	&__nav{
+
+		@include margin-vertical(0,0);
+		@include padding-vertical(22px,22px);
+		
+
+		.footer{
+			
+			&__nav{
+
+				&-item{
+					@include margin-horizontal(0,0);
+
+				}
+			}
+		}		
+
+		.footer{
+
+			&__nav{
+
+				&-link{
+			
+					@include font($font-family-main,12px,$gray-lighter,none);
+					@include padding-custom(18px, 13px, 18px, 13px);
+					border-radius:0;
+					
+					&:hover{
+						
+						background-color: $brand-secondary;
+						color: $gray-base;
+					}
+				}
+
+			}
+		}
+		
+	}
+
+	&__form{
+
+		text-align: center;
+
+		&-label{
+
+			@include font($font-family-main,14px,$gray-lighter,uppercase);
+		}
+
+		&-btn{
+
+			background-color: transparent;
+			position: absolute;
+			top: -8px;
+    		right: 0;
+    		
+    		&:focus{
+
+    			color: $gray-lighter;
+    			outline: none;
+    		}
+		}
+
+		&-input{
+
+			width: 90%;
+			
+			&-holder{
+				
+				position: relative;
+				
+			}
+
+			::-webkit-input-placeholder {
+			
+				@include font($font-family-sub,10px,$gray-lighter,none);
+			}
+
+			:-moz-placeholder { /* Firefox 18- */
+			   @include font($font-family-sub,10px,$gray-lighter,none); 
+			}
+
+			::-moz-placeholder {  /* Firefox 19+ */
+			   @include font($font-family-sub,10px,$gray-lighter,none);  
+			}
+
+			:-ms-input-placeholder {  
+			   @include font($font-family-sub,10px,$gray-lighter,none);  
+			}
+		}
+
+		&-holder{
+
+			@include padding-vertical(40px, 15px);
+		}
+		
+	}
+}
+
+.form{
+	
+	&__input{
+
+		background-color: transparent;
+		border:none;
+		border-bottom: 1px solid $gray-lighter;
+		
+		&:focus{
+		
+			outline: none;
+		}
+
+
+	}
+
+
+}
+
 // RESPONSIVE
+
 @media (min-width: $screen-sm){
+
 	.navbar{
+
+		>.container{
+
+			.navbar-brand--custom{
+
+					@include margin-horizontal(0,0);
+			}			
+		}
 
 		&--custom{
 
 			@include padding-vertical(30px, 30px);
-			position: static;
-				
+			position: static;				
 		}
 
 		&-nav{
@@ -188,8 +413,8 @@
 			    
 			    @include padding-horizontal(15px,15px);
 			}
-		}
-	}
+		}		
+	}	
 
 	.icon-nav{
 		
@@ -197,6 +422,11 @@
 
 		&__link{
 			@include padding-custom(10px, 10px, 10px, 10px);
+		}
+
+		&--footer{
+
+			margin:0;
 		}
 	}
 
@@ -207,6 +437,8 @@
 			height: 782px;
 		}
 	}
+
+	
 }
 
 @media (min-width: $screen-lg){
@@ -249,16 +481,167 @@
 		
 			&--custom{
 				@include margin-vertical(20px, 0);
+				
 			}
 		}
 	}
 
 	.icon-nav{
 
-		@include margin-vertical(38px, 0)
+		@include margin-vertical(38px, 0);
+		
+		&--footer{
+			
+			margin: 0;
+		}
 	}
 
 	.main{
+		
 		@include padding-vertical(170px, 150px);
+		
+		&__img{
+			
+			&--fall-winter{
+				
+				width: 100%;
+				height: 700px;
+				@include margin-custom(0, 0, 35px, 20px);
+			}
+
+			&--spring-summer{
+
+				width: 100%;
+				height: 790px;
+				@include margin-custom(0, auto, 50px, auto);
+			}
+
+			&--winter{
+
+				width: 100%;
+				height: 650px;
+			}
+			
+			&-caption{
+				
+				font-size: 24px;
+				
+				&--fall-winter{
+
+					bottom: 50%;
+    				right: 54%;
+				}
+
+				&--spring-summer{
+
+					bottom: 38%;
+	    			right: 0;
+				}
+
+				&--winter{
+
+					bottom: 14%;
+    				left: -21%;
+				}
+			}
+			
+		}
+
+		&__icon{
+			
+			&-square{
+				
+				@include margin-vertical(120px, 0);
+			}
+
+			&-triangle{
+
+				@include margin-vertical(510px, 0);
+			}
+
+			&-circle{
+
+				@include margin-vertical(380px, 0);
+			}
+		}
+	}
+
+	.footer{
+	
+		
+		&__content{
+
+			@include padding-vertical(75px,0);
+		}
+
+		&__nav{
+
+			
+			@include padding-vertical(0,0);
+			
+
+			.footer{
+				
+				&__nav{
+
+					&-item{
+						@include margin-horizontal(0,0);
+
+					}
+				}
+			}		
+
+			.footer{
+
+				&__nav{
+
+					&-link{
+				
+						
+						@include padding-custom(10px, 30px, 10px, 30px);
+						font-size: 18px;
+						
+						
+						&:hover{
+							
+							background-color: $brand-secondary;
+							color: $gray-base;
+						}
+					}
+
+				}
+			}
+			
+		}
+
+		&__form{
+			
+			&-label{
+				font-size: 18px;
+			}
+
+			&-input{
+
+				::-webkit-input-placeholder {			
+					font-size: 14px;
+				}
+
+				:-moz-placeholder { /* Firefox 18- */
+				   font-size: 14px; 
+				}
+
+				::-moz-placeholder {  /* Firefox 19+ */
+				   font-size: 14px;  
+				}
+
+				:-ms-input-placeholder {  
+				   font-size: 14px;  
+				}
+			}
+
+			&-holder{
+				@include padding-vertical(0,0);
+			}
+		}
 	}
 }

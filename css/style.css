@@ -3180,7 +3180,7 @@ hr {
 
 @media (min-width: 1200px) {
   .container {
-    width: 1170px;
+    width: 1560px;
   }
 }
 
@@ -4191,7 +4191,7 @@ legend {
   margin-bottom: 20px;
   font-size: 21px;
   line-height: inherit;
-  color: #333333;
+  color: #4d4d4d;
   border: 0;
   border-bottom: 1px solid #e5e5e5;
 }
@@ -6787,7 +6787,26 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 .icon-nav__link:hover,
 .icon-nav__link:focus {
   background-color: #000;
-  color: #FFF;
+  color: white;
+}
+
+.icon-nav__link--footer {
+  padding-top: 10px;
+  padding-right: 14px;
+  padding-bottom: 5px;
+  padding-left: 14px;
+  background-color: transparent;
+  color: white;
+}
+
+.icon-nav__link--footer:hover,
+.icon-nav__link--footer:focus {
+  background-color: #FFF;
+  color: #000;
+}
+
+.icon-nav--footer {
+  float: none;
 }
 
 .header__bg {
@@ -6801,11 +6820,198 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   padding-bottom: 40px;
 }
 
+.main__heading {
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
 .main__heading-holder {
   text-align: center;
 }
 
+.main__img {
+  background: no-repeat center center;
+  background-size: cover;
+  position: relative;
+}
+
+.main__img--fall-winter {
+  width: 175px;
+  height: 255px;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 35px;
+  margin-left: 20px;
+}
+
+.main__img--spring-summer {
+  width: 270px;
+  height: 265px;
+  margin-top: 0;
+  margin-right: auto;
+  margin-bottom: 50px;
+  margin-left: auto;
+}
+
+.main__img--winter {
+  width: 210px;
+  height: 280px;
+}
+
+.main__img-caption {
+  font-family: "MicrosoftPhagsPa-Bold";
+  font-size: 14px;
+  color: #000;
+  text-transform: uppercase;
+  position: absolute;
+}
+
+.main__img-caption--fall-winter {
+  bottom: 73px;
+  right: -75px;
+}
+
+.main__img-caption--spring-summer {
+  bottom: 19px;
+  right: 15px;
+}
+
+.main__img-caption--winter {
+  bottom: 27px;
+  left: -75px;
+}
+
+.main__icon {
+  display: inline-block;
+}
+
+.main__icon-square {
+  -webkit-transform: rotate(30deg);
+      -ms-transform: rotate(30deg);
+          transform: rotate(30deg);
+}
+
+.main__icon-triangle {
+  -webkit-transform: rotate(-15deg);
+      -ms-transform: rotate(-15deg);
+          transform: rotate(-15deg);
+}
+
+.footer {
+  background-color: #000;
+  color: #FFF;
+}
+
+.footer__nav {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 22px;
+  padding-bottom: 22px;
+}
+
+.footer__nav .footer__nav-item {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.footer__nav .footer__nav-link {
+  font-family: "MicrosoftPhagsPa-Bold";
+  font-size: 12px;
+  color: white;
+  text-transform: none;
+  padding-top: 18px;
+  padding-right: 13px;
+  padding-bottom: 18px;
+  padding-left: 13px;
+  border-radius: 0;
+}
+
+.footer__nav .footer__nav-link:hover {
+  background-color: #FFF;
+  color: #000;
+}
+
+.footer__form {
+  text-align: center;
+}
+
+.footer__form-label {
+  font-family: "MicrosoftPhagsPa-Bold";
+  font-size: 14px;
+  color: white;
+  text-transform: uppercase;
+}
+
+.footer__form-btn {
+  background-color: transparent;
+  position: absolute;
+  top: -8px;
+  right: 0;
+}
+
+.footer__form-btn:focus {
+  color: white;
+  outline: none;
+}
+
+.footer__form-input {
+  width: 90%;
+}
+
+.footer__form-input-holder {
+  position: relative;
+}
+
+.footer__form-input ::-webkit-input-placeholder {
+  font-family: "MicrosoftPhagsPa";
+  font-size: 10px;
+  color: white;
+  text-transform: none;
+}
+
+.footer__form-input :-moz-placeholder {
+  /* Firefox 18- */
+  font-family: "MicrosoftPhagsPa";
+  font-size: 10px;
+  color: white;
+  text-transform: none;
+}
+
+.footer__form-input ::-moz-placeholder {
+  /* Firefox 19+ */
+  font-family: "MicrosoftPhagsPa";
+  font-size: 10px;
+  color: white;
+  text-transform: none;
+}
+
+.footer__form-input :-ms-input-placeholder {
+  font-family: "MicrosoftPhagsPa";
+  font-size: 10px;
+  color: white;
+  text-transform: none;
+}
+
+.footer__form-holder {
+  padding-top: 40px;
+  padding-bottom: 15px;
+}
+
+.form__input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid white;
+}
+
+.form__input:focus {
+  outline: none;
+}
+
 @media (min-width: 768px) {
+  .navbar > .container .navbar-brand--custom {
+    margin-right: 0;
+    margin-left: 0;
+  }
   .navbar--custom {
     padding-top: 30px;
     padding-bottom: 30px;
@@ -6841,6 +7047,9 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
     padding-right: 10px;
     padding-bottom: 10px;
     padding-left: 10px;
+  }
+  .icon-nav--footer {
+    margin: 0;
   }
   .header__bg {
     height: 782px;
@@ -6879,9 +7088,103 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
     margin-top: 38px;
     margin-bottom: 0;
   }
+  .icon-nav--footer {
+    margin: 0;
+  }
   .main {
     padding-top: 170px;
     padding-bottom: 150px;
+  }
+  .main__img--fall-winter {
+    width: 100%;
+    height: 700px;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 35px;
+    margin-left: 20px;
+  }
+  .main__img--spring-summer {
+    width: 100%;
+    height: 790px;
+    margin-top: 0;
+    margin-right: auto;
+    margin-bottom: 50px;
+    margin-left: auto;
+  }
+  .main__img--winter {
+    width: 100%;
+    height: 650px;
+  }
+  .main__img-caption {
+    font-size: 24px;
+  }
+  .main__img-caption--fall-winter {
+    bottom: 50%;
+    right: 54%;
+  }
+  .main__img-caption--spring-summer {
+    bottom: 38%;
+    right: 0;
+  }
+  .main__img-caption--winter {
+    bottom: 14%;
+    left: -21%;
+  }
+  .main__icon-square {
+    margin-top: 120px;
+    margin-bottom: 0;
+  }
+  .main__icon-triangle {
+    margin-top: 510px;
+    margin-bottom: 0;
+  }
+  .main__icon-circle {
+    margin-top: 380px;
+    margin-bottom: 0;
+  }
+  .footer__content {
+    padding-top: 75px;
+    padding-bottom: 0;
+  }
+  .footer__nav {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .footer__nav .footer__nav-item {
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .footer__nav .footer__nav-link {
+    padding-top: 10px;
+    padding-right: 30px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    font-size: 18px;
+  }
+  .footer__nav .footer__nav-link:hover {
+    background-color: #FFF;
+    color: #000;
+  }
+  .footer__form-label {
+    font-size: 18px;
+  }
+  .footer__form-input ::-webkit-input-placeholder {
+    font-size: 14px;
+  }
+  .footer__form-input :-moz-placeholder {
+    /* Firefox 18- */
+    font-size: 14px;
+  }
+  .footer__form-input ::-moz-placeholder {
+    /* Firefox 19+ */
+    font-size: 14px;
+  }
+  .footer__form-input :-ms-input-placeholder {
+    font-size: 14px;
+  }
+  .footer__form-holder {
+    padding-top: 0;
+    padding-bottom: 0;
   }
 }
 
