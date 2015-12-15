@@ -3180,7 +3180,7 @@ hr {
 
 @media (min-width: 1200px) {
   .container {
-    width: 1560px;
+    width: 1170px;
   }
 }
 
@@ -6795,6 +6795,8 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   padding-right: 14px;
   padding-bottom: 5px;
   padding-left: 14px;
+  margin-right: 8px;
+  margin-left: 7px;
   background-color: transparent;
   color: white;
 }
@@ -6807,10 +6809,13 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 
 .icon-nav--footer {
   float: none;
+  display: inline-block;
+  margin-top: 0;
+  margin-bottom: 25px;
 }
 
 .header__bg {
-  background: no-repeat center center;
+  background: no-repeat center top;
   background-size: cover;
   height: 415px;
 }
@@ -6830,7 +6835,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 }
 
 .main__img {
-  background: no-repeat center center;
+  background: no-repeat center top;
   background-size: cover;
   position: relative;
 }
@@ -6872,7 +6877,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 }
 
 .main__img-caption--spring-summer {
-  bottom: 19px;
+  bottom: 10px;
   right: 15px;
 }
 
@@ -6900,13 +6905,13 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 .footer {
   background-color: #000;
   color: #FFF;
+  text-align: center;
 }
 
 .footer__nav {
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-top: 22px;
-  padding-bottom: 22px;
+  margin-top: 0px;
+  margin-bottom: 22px;
+  display: inline-block;
 }
 
 .footer__nav .footer__nav-item {
@@ -6920,9 +6925,9 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   color: white;
   text-transform: none;
   padding-top: 18px;
-  padding-right: 13px;
+  padding-right: 16px;
   padding-bottom: 18px;
-  padding-left: 13px;
+  padding-left: 16px;
   border-radius: 0;
 }
 
@@ -6994,7 +6999,24 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 
 .footer__form-holder {
   padding-top: 40px;
-  padding-bottom: 15px;
+  padding-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+
+.footer__copyrights {
+  border-top: 1px solid #4d4d4d;
+  font-family: "MicrosoftPhagsPa-Bold";
+  font-size: 14px;
+  color: #4d4d4d;
+  text-transform: none;
+  padding-top: 20px;
+  padding-bottom: 22px;
+}
+
+.footer__content {
+  padding-top: 40px;
+  padding-bottom: 25px;
 }
 
 .form__input {
@@ -7019,9 +7041,9 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   }
   .navbar-nav--custom {
     margin-top: 7.5px;
-    margin-right: 15px;
+    margin-right: 0;
     margin-bottom: 7.5px;
-    margin-left: 15px;
+    margin-left: 0;
     display: inline-block;
     padding-top: 0;
     padding-bottom: 0;
@@ -7035,8 +7057,8 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   .navbar-collapse--custom {
     position: static;
     width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 0;
+    padding-left: 0;
   }
   .icon-nav {
     margin-top: 10px;
@@ -7052,17 +7074,13 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
     margin: 0;
   }
   .header__bg {
-    height: 782px;
+    height: 685px;
   }
 }
 
 @media (min-width: 1200px) {
   .heading--main {
     font-size: 48px;
-  }
-  .navbar--custom {
-    padding-top: 40px;
-    padding-bottom: 40px;
   }
   .navbar-nav__link {
     font-family: "MicrosoftPhagsPa-Bold";
@@ -7079,6 +7097,8 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   .navbar-nav--custom {
     padding-top: 0;
     padding-bottom: 0;
+    margin-right: 15px;
+    margin-left: 15px;
   }
   .navbar-brand--custom {
     margin-top: 20px;
@@ -7089,7 +7109,8 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
     margin-bottom: 0;
   }
   .icon-nav--footer {
-    margin: 0;
+    margin-top: 25px;
+    margin-bottom: 0;
   }
   .main {
     padding-top: 170px;
@@ -7144,11 +7165,13 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   }
   .footer__content {
     padding-top: 75px;
-    padding-bottom: 0;
+    padding-bottom: 75px;
   }
   .footer__nav {
     padding-top: 0;
     padding-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
   }
   .footer__nav .footer__nav-item {
     margin-right: 0;
@@ -7156,9 +7179,9 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   }
   .footer__nav .footer__nav-link {
     padding-top: 10px;
-    padding-right: 30px;
+    padding-right: 20px;
     padding-bottom: 10px;
-    padding-left: 30px;
+    padding-left: 20px;
     font-size: 18px;
   }
   .footer__nav .footer__nav-link:hover {
@@ -7167,6 +7190,8 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   }
   .footer__form-label {
     font-size: 18px;
+    text-transform: none;
+    width: 30%;
   }
   .footer__form-input ::-webkit-input-placeholder {
     font-size: 14px;
@@ -7182,9 +7207,19 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   .footer__form-input :-ms-input-placeholder {
     font-size: 14px;
   }
+  .footer__form-input-holder {
+    width: 68%;
+    display: inline-block;
+  }
   .footer__form-holder {
     padding-top: 0;
     padding-bottom: 0;
+    margin-top: 30px;
+    margin-bottom: 0;
+  }
+  .footer__copyrights {
+    padding-top: 40px;
+    padding-bottom: 42px;
   }
 }
 

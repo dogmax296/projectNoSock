@@ -134,6 +134,7 @@
 		&--footer{
 
 			@include padding-custom(10px, 14px, 5px, 14px);
+			@include margin-horizontal(8px, 7px);
 			background-color: transparent;
 			color: $gray-lighter;
 			
@@ -148,6 +149,9 @@
 	&--footer{
 
 		float:none;
+		display: inline-block;
+		@include margin-vertical(0, 25px);
+		
 	}
 }
 
@@ -212,7 +216,7 @@
 
 			&--spring-summer{
 
-				bottom: 19px;
+				bottom: 10px;
     			right: 15px;
 			}
 
@@ -245,12 +249,13 @@
 	
 	background-color: $brand-primary;
 	color: $brand-secondary;
+	text-align: center;
 	
 
 	&__nav{
 
-		@include margin-vertical(0,0);
-		@include padding-vertical(22px,22px);
+		@include margin-vertical(0px,22px);
+		display: inline-block;
 		
 
 		.footer{
@@ -271,7 +276,7 @@
 				&-link{
 			
 					@include font($font-family-main,12px,$gray-lighter,none);
-					@include padding-custom(18px, 13px, 18px, 13px);
+					@include padding-custom(18px, 16px, 18px, 16px);
 					border-radius:0;
 					
 					&:hover{
@@ -339,9 +344,22 @@
 
 		&-holder{
 
-			@include padding-vertical(40px, 15px);
+			@include padding-vertical(40px, 0);
+			@include margin-vertical(0, 25px);
 		}
 		
+	}
+
+	&__copyrights{
+
+		border-top: 1px solid $gray-dark;		
+		@include font($font-family-main,14px,$gray-dark,none);
+		@include padding-vertical(20px,22px);
+	}
+
+	&__content{
+		
+		@include padding-vertical(40px,25px);
 	}
 }
 
@@ -388,7 +406,7 @@
 			
 			&--custom{
 				
-				@include margin-custom(7.5px, 15px, 7.5px, 15px);
+				@include margin-custom(7.5px, 0, 7.5px, 0);
 				display: inline-block;
 				@include padding-vertical(0, 0);
 			}
@@ -411,7 +429,7 @@
 			    width: 100%;
 			    
 			    
-			    @include padding-horizontal(15px,15px);
+			    @include padding-horizontal(0,0);
 			}
 		}		
 	}	
@@ -434,7 +452,7 @@
 
 		&__bg{
 
-			height: 782px;
+			height: 685px;
 		}
 	}
 
@@ -453,10 +471,7 @@
 
 	.navbar{
 
-		&--custom{
-			@include padding-vertical(40px, 40px);
-				
-		}
+		
 
 		&-nav{
 
@@ -474,6 +489,7 @@
 			&--custom{
 				
 				@include padding-vertical(0, 0);
+				@include margin-horizontal(15px, 15px);
 			}		
 		}
 
@@ -492,7 +508,7 @@
 		
 		&--footer{
 			
-			margin: 0;
+			@include margin-vertical(25px, 0);
 		}
 	}
 
@@ -567,17 +583,17 @@
 	}
 
 	.footer{
-	
-		
+			
 		&__content{
 
-			@include padding-vertical(75px,0);
+			@include padding-vertical(75px,75px);
 		}
 
 		&__nav{
 
 			
 			@include padding-vertical(0,0);
+			@include margin-vertical(0,0);
 			
 
 			.footer{
@@ -598,7 +614,7 @@
 					&-link{
 				
 						
-						@include padding-custom(10px, 30px, 10px, 30px);
+						@include padding-custom(10px, 20px, 10px, 20px);
 						font-size: 18px;
 						
 						
@@ -617,7 +633,10 @@
 		&__form{
 			
 			&-label{
+
 				font-size: 18px;
+				text-transform: none;
+   				width: 30%;
 			}
 
 			&-input{
@@ -637,11 +656,25 @@
 				:-ms-input-placeholder {  
 				   font-size: 14px;  
 				}
+
+				&-holder{
+
+					width: 68%;
+    				display: inline-block;
+				}
 			}
 
 			&-holder{
+
 				@include padding-vertical(0,0);
+				@include margin-vertical(30px,0);
+				
 			}
+		}
+
+		&__copyrights{
+
+			@include padding-vertical(40px,42px);
 		}
 	}
 }
