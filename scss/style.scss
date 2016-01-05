@@ -641,12 +641,21 @@
 
 		&-store{
 
+			@include padding-vertical(50px, 80px);
+			
+			&__grid{
+
+				@include padding-vertical(70px, 0);
+			}
+
 			&__product{
 				
 				position: relative;
 			}
 			
 			&__img{
+
+				width:200px;
 
 				&:hover,
 				&:focus{
@@ -677,6 +686,85 @@
 				
 				&-price{
 					bottom: 15%;
+				}
+			}
+
+			&__breadcrumb{
+				
+				list-style-type: none;
+				@include padding-horizontal (0,0);
+				@include margin-vertical (0, 100px);
+				text-align: left;
+				
+				li{
+					display: inline-block;
+					@include font($font-family-sub,18px,$gray-base,none);
+					
+					&:after{
+
+						content:"/";
+					}
+
+					&:last-child{
+						
+						&:after{
+							content:"";
+						}
+					}
+
+					a{
+						@include font($font-family-sub,18px,$gray-base,none);
+						
+						&:hover,
+						&:focus{
+
+							color: $gray-darker;
+						}
+					}
+
+					&.active{
+						color: $gray-darker;
+					}
+				}
+			}
+
+			&__pagination{
+				
+				>li{
+					&:first-child,
+					&:last-child{
+						
+						>a{
+							border-radius:0;
+						}
+					}
+
+					>a{
+						border:none;
+						border-radius:0;
+						
+						
+						&:hover,
+						&:focus{
+							background-color: $gray-base;
+							color: $gray-lighter;
+						}
+						
+					}
+				}
+
+				>.active{
+					>a{
+						background-color: transparent;
+						color: $gray-base;
+						text-decoration: underline;
+						
+						&:hover,
+						&:focus{
+							background-color: $gray-base;
+							color: $gray-lighter;
+						}
+					}
 				}
 			}
 		}
@@ -740,6 +828,14 @@
 	.main{
 		
 		@include padding-vertical(170px, 150px);
+		
+		&-store{
+			
+			&__img{
+
+				width:320px;
+			}
+		}
 		
 		&__img{
 			

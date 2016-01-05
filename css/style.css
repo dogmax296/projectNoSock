@@ -7234,8 +7234,19 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   .main__subnav-link:focus {
     text-decoration: underline;
   }
+  .main-store {
+    padding-top: 50px;
+    padding-bottom: 80px;
+  }
+  .main-store__grid {
+    padding-top: 70px;
+    padding-bottom: 0;
+  }
   .main-store__product {
     position: relative;
+  }
+  .main-store__img {
+    width: 200px;
   }
   .main-store__img:hover + .main-store__img-caption,
   .main-store__img:focus + .main-store__img-caption {
@@ -7256,6 +7267,63 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   }
   .main-store__img-price {
     bottom: 15%;
+  }
+  .main-store__breadcrumb {
+    list-style-type: none;
+    padding-right: 0;
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 100px;
+    text-align: left;
+  }
+  .main-store__breadcrumb li {
+    display: inline-block;
+    font-family: "MicrosoftPhagsPa";
+    font-size: 18px;
+    color: #000;
+    text-transform: none;
+  }
+  .main-store__breadcrumb li:after {
+    content: "/";
+  }
+  .main-store__breadcrumb li:last-child:after {
+    content: "";
+  }
+  .main-store__breadcrumb li a {
+    font-family: "MicrosoftPhagsPa";
+    font-size: 18px;
+    color: #000;
+    text-transform: none;
+  }
+  .main-store__breadcrumb li a:hover,
+  .main-store__breadcrumb li a:focus {
+    color: #505050;
+  }
+  .main-store__breadcrumb li.active {
+    color: #505050;
+  }
+  .main-store__pagination > li:first-child > a,
+  .main-store__pagination > li:last-child > a {
+    border-radius: 0;
+  }
+  .main-store__pagination > li > a {
+    border: none;
+    border-radius: 0;
+  }
+  .main-store__pagination > li > a:hover,
+  .main-store__pagination > li > a:focus {
+    background-color: #000;
+    color: white;
+  }
+  .main-store__pagination > .active > a {
+    background-color: transparent;
+    color: #000;
+    text-decoration: underline;
+  }
+  .main-store__pagination > .active > a:hover,
+  .main-store__pagination > .active > a:focus {
+    background-color: #000;
+    color: white;
   }
 }
 
@@ -7296,6 +7364,9 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   .main {
     padding-top: 170px;
     padding-bottom: 150px;
+  }
+  .main-store__img {
+    width: 320px;
   }
   .main__img--fall-winter {
     width: 100%;
