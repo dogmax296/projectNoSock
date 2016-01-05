@@ -19,6 +19,12 @@
 
 		@include font($font-family-main,18px,$gray-base,uppercase);
 	}
+
+	&--store{
+		
+		@include font($font-family-sub,16px,$gray-base,uppercase);
+		
+	}
 }
 
 .navbar{
@@ -43,6 +49,7 @@
 		    left: 20px;
 		    background: $brand-secondary;
 		    @include padding-horizontal(0,0);
+		    z-index:$zindex-navbar;
 		}
 	}
 
@@ -113,6 +120,12 @@
 	float:right;
 	margin:0;
 	padding: 0;
+	
+	&--store{
+
+		float:none;
+		@include margin-vertical(30px, 0);
+	}
 
 	&__item{
 
@@ -134,7 +147,7 @@
 		&--footer{
 
 			@include padding-custom(10px, 14px, 5px, 14px);
-			@include margin-horizontal(8px, 7px);
+			// @include margin-horizontal(8px, 7px);
 			background-color: transparent;
 			color: $gray-lighter;
 			
@@ -243,6 +256,114 @@
 			transform: rotate(-15deg);
 		}
 	}
+	
+	&__nav{
+
+		list-style-type: none;
+		background-color: $gray-light;
+		@include padding-horizontal(0px, 0px);
+		@include margin-horizontal(-15px, -15px);
+		text-align: center;
+		
+		&-item{
+			
+			display: inline-block;
+			position: relative;
+			
+			&--active{
+
+				top:-3px;
+				
+				.main__nav-link{
+					
+					color: $gray-base;
+				}
+			}
+		}
+
+		&-link{
+			
+			@include font($font-family-main, 18px,$gray-darker, none);
+			display: block;
+			@include padding-custom(25px, 15px, 21px, 15px);
+			
+			&:hover,
+			&:focus{
+				color: $gray-base;
+			}
+		}
+	}
+
+	&-store{
+
+		text-align: center;
+		
+		&__img{
+			
+			width:180px;
+			display: inline-block;
+			vertical-align: top;
+			position: relative;
+			
+			&:hover,
+			&:focus{
+
+				.main-store__img-item{
+
+					opacity:0;
+					
+					&--hover{
+						
+						opacity:1;
+					}
+				}
+
+			}
+
+			&-heading{
+
+				@include margin-vertical(0, 20px);
+
+			}
+			
+			&-item{
+
+				opacity:1;
+				
+				&--hover{
+
+					opacity:0;
+					position: absolute;
+    				top: 0;
+				}
+			}
+			
+			&-price{
+
+				@include font($font-family-main,18px,$gray-base,uppercase);
+				display: inline-block;
+				transform: rotate(-90deg);
+				position: absolute;
+				left: 0;
+			    bottom: 35%;
+			}
+			
+			&-caption{
+				
+				display: inline-block;
+				vertical-align: top;
+				text-align: left;
+				@include padding-vertical(30px, 30px);
+			}
+
+			&-category{
+
+				@include font($font-family-sub,14px,$gray-base,none);
+				display: block;
+			}
+		}
+	}
+
 }
 
 .footer{
@@ -276,7 +397,7 @@
 				&-link{
 			
 					@include font($font-family-main,12px,$gray-lighter,none);
-					@include padding-custom(18px, 16px, 18px, 16px);
+					@include padding-custom(18px, 11px, 18px, 11px);
 					border-radius:0;
 					
 					&:hover{
@@ -382,6 +503,8 @@
 
 }
 
+
+
 // RESPONSIVE
 
 @media (min-width: $screen-sm){
@@ -398,7 +521,7 @@
 
 		&--custom{
 
-			@include padding-vertical(30px, 30px);
+			@include padding-vertical(20px, 20px);
 			position: static;				
 		}
 
@@ -437,9 +560,24 @@
 	.icon-nav{
 		
 		@include margin-vertical(10px, 0);
+		
+		&--store{
+
+			@include margin-vertical(0, 0);
+			position: absolute;
+		    top: 0;
+		    margin: 0;
+		    left: 0;
+
+		}
 
 		&__link{
 			@include padding-custom(10px, 10px, 10px, 10px);
+			
+			&--footer{
+				
+				@include margin-horizontal(8px, 7px);
+			}
 		}
 
 		&--footer{
@@ -452,10 +590,97 @@
 
 		&__bg{
 
-			height: 685px;
+			height: 490px;
 		}
 	}
+	
+	.main{
 
+		&__nav{
+			
+			background-color: transparent;
+			text-align: left;
+			@include margin-horizontal(0, 0);
+					
+			&-item{
+				
+				display: block;
+				
+				
+				&--active{
+
+					top:0;
+					
+					>.main__subnav{
+						display: block;
+					}
+					
+					
+				}
+			}
+
+			&-link{
+				color: $gray-base;
+			}
+		}
+		
+		&__subnav{
+		
+			list-style-type: none;
+			@include padding-horizontal(0px, 15px);
+			text-align: left;
+			
+			&-link{
+				
+				&:hover,
+				&:focus{
+					text-decoration: underline;
+				}
+			}
+		}
+
+		&-store{
+
+			&__product{
+				
+				position: relative;
+			}
+			
+			&__img{
+
+				&:hover,
+				&:focus{
+
+					+.main-store__img-caption{
+
+						opacity:1;
+					}
+
+				}
+
+				&-heading{
+					margin:0;
+				}
+
+				&-caption{
+					
+					text-align: right;
+					opacity:0;
+					float:right;
+					@include padding-vertical(0, 0);
+				}
+
+				&-category{
+					
+					display: inline-block;
+				}
+				
+				&-price{
+					bottom: 15%;
+				}
+			}
+		}
+	}
 	
 }
 
