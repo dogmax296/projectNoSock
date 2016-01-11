@@ -1,8 +1,8 @@
-
-
 // FONTS
-
 @import "_fonts.scss";
+
+// OWL CAROUSEL
+@import "owl.carousel.scss";
 
 // Variables
 @import "style/_custom-variables.scss";
@@ -24,6 +24,11 @@
 		
 		@include font($font-family-sub,16px,$gray-base,uppercase);
 		
+	}
+
+	&--item-info{
+		
+		@include font($font-family-main,16px,$gray-base,none);
 	}
 }
 
@@ -298,6 +303,10 @@
 
 		text-align: center;
 		
+		&__price{
+			@include font($font-family-main,18px,$gray-base,uppercase);
+		}
+		
 		&__img{
 			
 			width:180px;
@@ -340,7 +349,7 @@
 			
 			&-price{
 
-				@include font($font-family-main,18px,$gray-base,uppercase);
+				
 				display: inline-block;
 				transform: rotate(-90deg);
 				position: absolute;
@@ -362,9 +371,121 @@
 				display: block;
 			}
 		}
+
+		&__item{
+			
+			&-info{
+				
+				text-align: center;
+				
+			}
+
+			
+
+			
+
+			&-options{
+
+				text-align: left;
+				@include padding-horizontal(4px, 14px);
+				
+				&-text{
+
+					@include font($font-family-sub,18px,$gray-base,none);
+				}
+
+				&-var{
+
+					float: right;
+					&--quantity{
+						@include margin-horizontal(8px,0);
+					}
+				}
+
+				&-square{
+
+					width: 40px;
+					height: 40px;
+					float: right;
+					@include margin-horizontal(0,8px);
+					
+					&--success{
+						background-color: $brand-success;
+					}
+
+					&--info{
+						background-color: $brand-info;
+					}
+
+					&--warning{
+						background-color: $brand-warning;
+					}
+
+					&--quantity{
+
+						border:1px solid $gray-dark;
+						@include margin-horizontal(0,0);
+						@include padding-vertical(8px,0);
+						text-align: center;
+					    font-size: 18px;
+					}
+					
+
+				}
+			}
+
+		}
+
+		&__carousel{
+
+			position: relative;
+			
+			&-item{
+
+				width: 230px;
+				@include margin-custom(0, auto, 0, auto);
+			}
+
+			.owl-controls{
+
+				.owl-nav{
+
+					.owl-prev{
+
+						width: 21px;
+						height: 60px;
+						background: url(../images/sprite.png) 0 0;
+						background-size: cover;
+						display: inline-block;
+						vertical-align: top;
+						position: absolute;
+					    bottom: 40%;
+					    left: 0;
+					}
+
+					.owl-next{
+
+						width: 21px;
+						height: 60px;
+						background: url(../images/sprite.png) 0 0;
+						background-size: cover;
+						transform: rotate(180deg);
+						display: inline-block;
+						vertical-align: top;
+						position: absolute;
+					    bottom: 40%;
+					    right: 0;
+						
+						
+					}
+				}
+			}
+
+		}
 	}
 
 }
+
 
 .footer{
 	
@@ -729,6 +850,8 @@
 			}
 
 			&__pagination{
+
+				float:right;
 				
 				>li{
 					&:first-child,
@@ -765,6 +888,48 @@
 							color: $gray-lighter;
 						}
 					}
+				}
+			}
+
+			&__carousel{
+			
+				&-item{
+
+					width: 280px;
+					
+					
+				}
+
+				.owl-controls{
+
+					.owl-nav{
+
+						.owl-prev{
+							
+						    bottom: 50%;
+						   
+						}
+
+						.owl-next{
+
+						    bottom: 50%;
+						   						
+						}
+					}
+				}
+
+			}
+
+			&__item{
+				
+				&-info{
+					text-align: left;
+					
+				}
+
+				&-text{
+					@include font($font-family-sub,18px,$gray-base,none);
+					text-align: left;
 				}
 			}
 		}
@@ -834,6 +999,16 @@
 			&__img{
 
 				width:320px;
+			}
+
+			&__carousel{
+			
+				&-item{
+
+					width: 430px;
+					
+				}
+
 			}
 		}
 		
